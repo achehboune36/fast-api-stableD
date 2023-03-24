@@ -13,7 +13,7 @@ app = Celery('tasks', broker='redis://localhost:6379/0')
 @celery.task(name="create_task")
 def generate_image_task(prompt, negative_prompt, num_images, size, truncation, alpha, step_size, noise_scale):
     response = requests.post(
-        'https://abxr-stable-diff1245123.loca.lt/text2img', json={
+        'https://abxr-stable-diff.loca.lt//text2img', json={
             'prompt': prompt, 
             'negative_prompt': negative_prompt, 
             'num_images': num_images, 
